@@ -18,5 +18,12 @@ body {
 
 }
 
+p {
+    font-style: italic;
+    font-size: 5vmin;
+    font-weight: 400;
+    text-align: center;
+}
+
 
 

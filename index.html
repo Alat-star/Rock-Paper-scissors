@@ -24,12 +24,21 @@
       }
 
       const number = computerPlay();
-      const computerChoice = arrayChoice[number];
-      const value = choice.value;
 
-      choice.addEventListener('change', function (computerChoice, value){
+      const computerChoice = arrayChoice[number];
+
+      
+
+      
+
+       
+
+      choice.addEventListener('change', function () {
+
+          const value = choice.value.toLowerCase();
+         
         if (computerChoice === 'rock' && value === 'paper') {
-           para.textContent = ` Your ${value} beats ${computerChoice}, you win`;
+           para.textContent = `Your ${value} beats ${computerChoice}, you win`;
         }   
         else if (computerChoice === 'paper' && value === 'rock') {
              para.textContent = `Computer ${computerChoice} beats ${value}, you lose`;
@@ -49,7 +58,10 @@
              para.textContent = `Your ${value} beats ${computerChoice}, you win`;
 
         }
-        else {  para.textContent = 'Draw'; }
+        else if ( computerChoice === value) {  para.textContent = 'Draw'; }
+
+        else { para.textContent = 'error' ;}
+       
       });
           
      
