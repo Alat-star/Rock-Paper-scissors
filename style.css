@@ -1,0 +1,22 @@
+body {
+    background: tomato;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    /* font-size: 3vmin; */
+    margin-top: 15rem;
+    
+}
+
+.input-tag {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    font-size: 5vmin;
+    font-weight: 900;
+
+}
+
+
+

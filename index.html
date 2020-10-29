@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="input-tag">
+    <label for="game"> Rock Paper scissors</label>
+    <input name="game" type="text" placeholder="enter choice">
+    <p></p>
+  </div>
+
+  <script>
+      const choice = document.querySelector('input');
+      const para = document.querySelector('p');
+
+      const arrayChoice  = ['rock', 'scissors', 'paper']; 
+
+      function computerPlay () {
+        return Math.floor(Math.random() * 3);
+      }
+
+      const number = computerPlay();
+      const computerChoice = arrayChoice[number];
+      const value = choice.value;
+
+      choice.addEventListener('change', function (computerChoice, value){
+        if (computerChoice === 'rock' && value === 'paper') {
+           para.textContent = ` Your ${value} beats ${computerChoice}, you win`;
+        }   
+        else if (computerChoice === 'paper' && value === 'rock') {
+             para.textContent = `Computer ${computerChoice} beats ${value}, you lose`;
+        }
+        else if (computerChoice === 'paper' && value === 'scissors') {
+             para.textContent = ` Your ${value} cuts ${computerChoice}, you win`;
+        }
+        else if (computerChoice === 'scissors' && value === 'paper') {
+             para.textContent = `Computer ${computerChoice} cuts ${value}, you lose`;
+
+        }
+        else if (computerChoice === 'rock' && value === 'scissors') {
+             para.textContent = `Computer ${computerChoice} beats ${value}, you lose`;
+            
+        }
+        else if ( computerChoice === 'scissors' && value === 'rock') {
+             para.textContent = `Your ${value} beats ${computerChoice}, you win`;
+
+        }
+        else {  para.textContent = 'Draw'; }
+      });
+          
+     
+  </script>
+</body>
+</html>
