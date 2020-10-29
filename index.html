@@ -38,29 +38,29 @@
           const value = choice.value.toLowerCase();
          
         if (computerChoice === 'rock' && value === 'paper') {
-           para.textContent = `Your ${value} beats ${computerChoice}, you win`;
+           para.textContent = `${value} beats ${computerChoice}, you win`;
         }   
-        else if (computerChoice === 'paper' && value === 'rock') {
-             para.textContent = `Computer ${computerChoice} beats ${value}, you lose`;
+        else if (computerChoice === 'scissors' && value === 'paper') {
+             para.textContent = `${computerChoice} cuts ${value}, you lose`;
         }
         else if (computerChoice === 'paper' && value === 'scissors') {
-             para.textContent = ` Your ${value} cuts ${computerChoice}, you win`;
-        }
-        else if (computerChoice === 'scissors' && value === 'paper') {
-             para.textContent = `Computer ${computerChoice} cuts ${value}, you lose`;
-
+             para.textContent = `${value} cuts ${computerChoice}, you win`;
         }
         else if (computerChoice === 'rock' && value === 'scissors') {
-             para.textContent = `Computer ${computerChoice} beats ${value}, you lose`;
+             para.textContent = `${computerChoice} beats ${value}, you lose`;
+
+        }
+        else if (computerChoice === 'paper' && value === 'rock') {
+             para.textContent = `${computerChoice} beats ${value}, you lose`;
             
         }
         else if ( computerChoice === 'scissors' && value === 'rock') {
-             para.textContent = `Your ${value} beats ${computerChoice}, you win`;
+             para.textContent = `${value} beats ${computerChoice}, you win`;
 
         }
         else if ( computerChoice === value) {  para.textContent = 'Draw'; }
 
-        else { para.textContent = 'error' ;}
+        else { para.textContent = 'Error, enter rock/paper/scissors' ;}
        
       });
           

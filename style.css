@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
 body {
     background: tomato;
     display: grid;
@@ -5,14 +11,17 @@ body {
     place-items: center;
     /* font-size: 3vmin; */
     margin-top: 15rem;
+    text-align: center;
     
 }
 
 .input-tag {
+    /* height: 200px; */
+    /* min-width: 250px; */
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: auto auto auto;
     font-size: 5vmin;
     font-weight: 900;
 
@@ -23,6 +32,14 @@ p {
     font-size: 5vmin;
     font-weight: 400;
     text-align: center;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* max-width: 40vmin; */
+    height: 5vmin;
+    justify-self: center;
 }
 
 
